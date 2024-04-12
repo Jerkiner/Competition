@@ -9,6 +9,7 @@
 #include "usart3.h"
 #include "relay.h"
 
+u8 buff_adc[32];
 
 float K = 5.05;  // µçÑ¹Ë¥¼õ±¶Êý
 
@@ -247,7 +248,7 @@ void Task_inputImp(void)
     float temp;
     u16 adcx;
     Relay_Set(1);
-    u8 buff_adc[32];
+//    u8 buff_adc[32];
     LCD_Clear(BLACK);
 
     while(Mark_Sign.Task_Mark == Task_InputImp)

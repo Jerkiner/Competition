@@ -77,7 +77,7 @@ void LCD_WR_REG(u8 data)
 { 
    LCD_CS_CLR;     
 	 LCD_RS_CLR;	  
-   SPI_WriteByte(SPI1,data);
+   SPI_WriteByte(SPI2,data);
    LCD_CS_SET;	
 }
 
@@ -92,7 +92,7 @@ void LCD_WR_DATA(u8 data)
 {
    LCD_CS_CLR;
 	 LCD_RS_SET;
-   SPI_WriteByte(SPI1,data);
+   SPI_WriteByte(SPI2,data);
    LCD_CS_SET;
 }
 
@@ -133,8 +133,8 @@ void Lcd_WriteData_16Bit(u16 Data)
 {	
    LCD_CS_CLR;
    LCD_RS_SET;  
-   SPI_WriteByte(SPI1,Data>>8);
-	 SPI_WriteByte(SPI1,Data);
+   SPI_WriteByte(SPI2,Data>>8);
+	 SPI_WriteByte(SPI2,Data);
    LCD_CS_SET;
 }
 
@@ -188,7 +188,7 @@ void LCD_GPIOInit(void)
 	      
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB ,ENABLE);
 	
-	GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_12| GPIO_Pin_13|GPIO_Pin_14| GPIO_Pin_15;
+	GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_12| GPIO_Pin_1|GPIO_Pin_6| GPIO_Pin_7;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;//普通输出模式
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;   //推挽输出
@@ -220,7 +220,7 @@ void LCD_RESET(void)
 ******************************************************************************/	 	 
 void LCD_Init(void)
 {  
-	SPI1_Init(); //硬件SPI初始化
+	SPI2_Init(); //硬件SPI初始化
 //	SPI_SetSpeed(SPI1,SPI_BaudRatePrescaler_2);
 	LCD_GPIOInit();//LCD GPIO初始化										 
  	LCD_RESET(); //LCD 复位

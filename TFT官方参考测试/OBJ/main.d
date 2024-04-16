@@ -38,6 +38,5 @@
 ..\obj\main.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\main.o: ..\HARDWARE\LCD\lcd.h
 ..\obj\main.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\main.o: ..\HARDWARE\TOUCH\touch.h
 ..\obj\main.o: ..\USER\gui.h
 ..\obj\main.o: ..\USER\test.h

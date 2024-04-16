@@ -57,7 +57,7 @@
 #include "sys.h"	 
 #include "stdlib.h"
 
-//LCD重要参数集
+//LCD重要参数集  重要引用数组
 typedef struct  
 {										    
 	u16 width;			//LCD 宽度
@@ -67,7 +67,7 @@ typedef struct
 	u16	 wramcmd;		//开始写gram指令
 	u16  setxcmd;		//设置x坐标指令
 	u16  setycmd;		//设置y坐标指令	 
-}_lcd_dev; 	
+}_lcd_dev; 		
 
 //LCD参数
 extern _lcd_dev lcddev;	//管理LCD重要参数
@@ -86,10 +86,10 @@ extern u16  BACK_COLOR; //背景颜色.默认为白色
 ////////////////////////////////////////////////////////////////////
 //-----------------LCD端口定义---------------- 
 
-#define LED  13        //背光控制引脚
-#define CS   15       //片选引脚
-#define RS   14       //寄存器/数据选择引脚  
-#define RST  12       //复位引脚
+#define LED  1        //背光控制引脚
+#define CS   12       //片选引脚
+#define RS   7       //寄存器/数据选择引脚  
+#define RST  6       //复位引脚
 
 //QDtech全系列模块采用了三极管控制背光亮灭，用户也可以接PWM调节背光亮度
 #define	LCD_LED PBout(LED) //LCD背光    		 

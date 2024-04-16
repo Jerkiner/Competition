@@ -98,41 +98,41 @@ int main(void)
     while(1)
     {
 		Draw_Circle(0, 0, 2, RED);
-//        LCD_Show_R1_Open();
-//        delay_ms(1000);
-//        LCD_Show_R2_Open();
-//        delay_ms(1000);
-//        LCD_Show_R3_Open();
-//        delay_ms(1000);
-//        LCD_Show_R4_Open();
-//        delay_ms(1000);
-//        
-//        LCD_Show_R1_Short();
-//        delay_ms(1000);
-//        LCD_Show_R2_Short();
-//        delay_ms(1000);
-//         LCD_Show_R3_Short();
-//        delay_ms(1000);
-//        LCD_Show_R4_Short();
-//        delay_ms(1000);
-//        
-//        LCD_Show_C1_Open();
-//        delay_ms(1000);
-//        LCD_Show_C2_Open();
-//        delay_ms(1000);
-//        LCD_Show_C3_Open();
-//        delay_ms(1000);
-//        
-//        
-//        LCD_Show_C1_x2();
-//        delay_ms(1000);
-//        LCD_Show_C2_x2();
-//        delay_ms(1000);
-//        LCD_Show_C3_x2();
-//        delay_ms(1000);
-//        
-//        LCD_Show_Normal();
-//        delay_ms(1000);
+        LCD_Show_R1_Open();
+        delay_ms(1000);
+        LCD_Show_R2_Open();
+        delay_ms(1000);
+        LCD_Show_R3_Open();
+        delay_ms(1000);
+        LCD_Show_R4_Open();
+        delay_ms(1000);
+        
+        LCD_Show_R1_Short();
+        delay_ms(1000);
+        LCD_Show_R2_Short();
+        delay_ms(1000);
+         LCD_Show_R3_Short();
+        delay_ms(1000);
+        LCD_Show_R4_Short();
+        delay_ms(1000);
+        
+        LCD_Show_C1_Open();
+        delay_ms(1000);
+        LCD_Show_C2_Open();
+        delay_ms(1000);
+        LCD_Show_C3_Open();
+        delay_ms(1000);
+        
+        
+        LCD_Show_C1_x2();
+        delay_ms(1000);
+        LCD_Show_C2_x2();
+        delay_ms(1000);
+        LCD_Show_C3_x2();
+        delay_ms(1000);
+        
+        LCD_Show_Normal();
+        delay_ms(1000);
     }
 //    while(1)
 //    {
